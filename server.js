@@ -17,8 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.get('/', (req, res) => {
     res.send("🚀 Backend Running Successfully")
 })
-
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 const Medicine = require('./Medicine')
 // Add Medicine
